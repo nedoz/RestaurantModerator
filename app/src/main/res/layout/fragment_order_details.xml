@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    tools:context=".ui.orders.OrderDetailsFragment">
+
+    <TextView
+        android:id="@+id/tv_order_date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo"
+        android:text="تاريخ الطلب"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="10dp" />
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/tv_order_date"
+        android:layout_width="wrap_content"
+        android:text="tuesday 2020.9.20"
+        app:layout_constraintTop_toTopOf="@id/tv_order_date_txt"
+        app:layout_constraintBottom_toBottomOf="@id/tv_order_date_txt"
+
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@id/tv_order_date_txt"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvt_order_num_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/cairo"
+        android:text="رقم الطلب:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
+        app:layout_constraintRight_toRightOf="@id/tv_order_date_txt"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_date_txt" />
+    <TextView
+        android:id="@+id/order_num"
+        android:text="50"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintRight_toLeftOf="@id/tvt_order_num_txt"
+        app:layout_constraintTop_toTopOf="@id/tvt_order_num_txt"
+        android:layout_marginRight="3dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvt_order_num_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_order_price"
+        android:layout_width="wrap_content"
+        android:text="99 ريال"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/cairo"
+        app:layout_constraintTop_toBottomOf="@id/tvt_order_num_txt"
+        app:layout_constraintRight_toRightOf="@id/tvt_order_num_txt"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_items_num_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="عدد المنتجات :"
+        android:fontFamily="@font/cairo"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/tv_order_price"
+        app:layout_constraintTop_toBottomOf="@id/tv_order_price"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/tv_order_num"
+        android:text="3"
+        android:fontFamily="@font/cairo"
+        android:textStyle="bold"
+        app:layout_constraintRight_toLeftOf="@id/tv_items_num_txt"
+        app:layout_constraintTop_toTopOf="@id/tv_items_num_txt"
+        android:layout_marginRight="3dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_items_num_txt"
+        android:layout_height="wrap_content"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
