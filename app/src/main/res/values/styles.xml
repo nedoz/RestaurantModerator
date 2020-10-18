@@ -7,4 +7,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="toolBar">
+        <item name="android:textSize">20dp</item>
+        <item name="fontFamily">@font/cairo</item>
+    </style>
 </resources>

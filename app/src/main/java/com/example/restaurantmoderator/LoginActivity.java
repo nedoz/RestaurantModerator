@@ -7,19 +7,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.restaurantmoderator.databinding.ActivityMainBinding;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.restaurantmoderator.databinding.ActivityLoginBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        ActivityLoginBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_login);
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                  startActivity(new Intent(MainActivity.this,NavigationActivity.class));
+                  startActivity(new Intent(LoginActivity.this,NavigationActivity.class));
             }
         });
 
