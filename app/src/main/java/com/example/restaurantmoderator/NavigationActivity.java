@@ -44,11 +44,11 @@ navController.addOnDestinationChangedListener(new NavController.OnDestinationCha
     @Override
     public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
      if (destination.getId()==R.id.navigation_home)
-       toolbarTile.setText("الحساب");
+       toolbarTile.setText(destination.getLabel());
      else if(destination.getId()==R.id.navigation_orders)
-         toolbarTile.setText("الطلبات الحالية");
+         toolbarTile.setText(destination.getLabel());
      else if(destination.getId()==R.id.navigation_notifications)
-         toolbarTile.setText(" الاشعارات");
+         toolbarTile.setText(destination.getLabel());
     }
 
 });

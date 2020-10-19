@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Account">الحساب</string>
+    <string name="current_orders">الطلبات الحالية</string>
+    <string name="order_details">تفاصيل الطلب</string>
+</resources>

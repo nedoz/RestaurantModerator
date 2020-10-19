@@ -17,26 +17,26 @@
 
         <com.github.siyamed.shapeimageview.CircularImageView
             android:id="@+id/iv_restaurant_img"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:src="@drawable/food"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_restaurant_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
             android:fontFamily="@font/cairo"
             android:text="@string/restaurant_name"
 
             android:textColor="@android:color/black"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/iv_restaurant_img"
-            app:layout_constraintEnd_toStartOf="@id/iv_restaurant_img"
+            app:layout_constraintStart_toEndOf="@id/iv_restaurant_img"
             app:layout_constraintTop_toTopOf="@id/iv_restaurant_img" />
 
         <TextView
@@ -45,14 +45,14 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="20dp"
-            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="20dp"
             android:fontFamily="@font/cairo"
             android:text="@string/status"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_restaurant_img" />
 
         <Switch
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             app:layout_constraintBottom_toBottomOf="@id/tv_status"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tv_status" />
 
         <View
@@ -79,14 +79,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
-            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="20dp"
             android:fontFamily="@font/cairo"
             android:text="@string/last_orders"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/tv_status"
+
+            app:layout_constraintStart_toStartOf="@id/tv_status"
             app:layout_constraintTop_toBottomOf="@id/divider1" />
 
         <View
@@ -105,14 +105,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
-            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="20dp"
             android:fontFamily="@font/cairo"
             android:text="@string/rates"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/tv_status"
+
+            app:layout_constraintStart_toStartOf="@id/tv_status"
             app:layout_constraintTop_toBottomOf="@id/divider2" />
     <RatingBar
     android:layout_width="wrap_content"
@@ -121,7 +121,7 @@
         style="@style/Widget.AppCompat.RatingBar.Indicator"
     app:layout_constraintTop_toTopOf="@id/tv_rates"
     app:layout_constraintBottom_toBottomOf="@id/tv_rates"
-    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
     android:layout_height="wrap_content"/>
 
         <View
@@ -140,26 +140,27 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
-            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="20dp"
             android:fontFamily="@font/cairo"
             android:text="@string/app_lang"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/tv_status"
+
+            app:layout_constraintStart_toStartOf="@id/tv_status"
             app:layout_constraintTop_toBottomOf="@id/divider3" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
             android:fontFamily="@font/cairo"
             android:text="@string/arabic"
+
             android:textColor="@android:color/holo_blue_light"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/tv_app_lang"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/tv_app_lang" />
 
         <View
@@ -178,15 +179,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="8dp"
-            android:drawableRight="@drawable/ic_baseline_person_24"
+
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="20dp"
             android:fontFamily="@font/cairo"
             android:text="@string/contact_us"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/tv_status"
+
+            app:layout_constraintStart_toStartOf="@id/tv_status"
             app:layout_constraintTop_toBottomOf="@id/divider4" />
 
         <View
@@ -205,14 +206,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
-            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="20dp"
             android:fontFamily="@font/cairo"
             android:text="@string/about_app"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/tv_status"
+
+            app:layout_constraintStart_toStartOf="@id/tv_status"
             app:layout_constraintTop_toBottomOf="@id/divider5" />
 
         <View
@@ -231,14 +232,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
-            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="20dp"
             android:fontFamily="@font/cairo"
             android:text="@string/usage_policy"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/tv_status"
+
+            app:layout_constraintStart_toStartOf="@id/tv_status"
             app:layout_constraintTop_toBottomOf="@id/divider6" />
 
         <View
@@ -257,14 +258,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
-            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="20dp"
             android:fontFamily="@font/cairo"
             android:text="@string/logout"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@id/tv_status"
+
+            app:layout_constraintStart_toStartOf="@id/tv_status"
             app:layout_constraintTop_toBottomOf="@id/divider7" />
 
         <View
@@ -283,15 +284,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="8dp"
-            android:drawableRight="@drawable/ic_baseline_person_24"
+            android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="20dp"
             android:fontFamily="@font/cairo"
             android:text="@string/time_to_delivery"
             android:paddingBottom="10dp"
-            android:textStyle="bold"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/black"
-            app:layout_constraintEnd_toEndOf="@id/tv_status"
+            app:layout_constraintStart_toStartOf="@id/tv_status"
             app:layout_constraintTop_toBottomOf="@id/divider8" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

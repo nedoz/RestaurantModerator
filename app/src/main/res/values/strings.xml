@@ -48,4 +48,8 @@
     <string name="usage_policy">سياسة الاستخدام</string>
     <string name="logout">تسجيل الخروج</string>
     <string name="time_to_delivery">وقت التوصيل 50 min</string>
+    <string name="Account">الحساب</string>
+    <string name="current_orders">الطلبات الحالية</string>
+    <string name="notifications">الاشعارات</string>
+    <string name="order_details">تفاصيل الطلب</string>
 </resources>
