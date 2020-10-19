@@ -110,6 +110,7 @@
             android:paddingRight="50dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:paddingLeft="50dp"
+android:ems="7"
             android:textColor="@android:color/white"
             android:background="@drawable/btn_bg"
             app:layout_constraintTop_toBottomOf="@+id/et_userPass"

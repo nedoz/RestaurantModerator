@@ -24,7 +24,7 @@
                 android:layout_width="wrap_content"
                 android:text="@string/order_date"
                 app:layout_constraintTop_toTopOf="parent"
-                android:alpha=".3"
+
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_height="wrap_content" />
@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:alpha=".3"
+
                 android:fontFamily="@font/cairo"
 
                 android:text="@string/order_num_txt"
@@ -49,7 +49,7 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 app:layout_constraintStart_toEndOf="@id/tvt_order_num_txt"
                 app:layout_constraintTop_toTopOf="@id/tvt_order_num_txt"
-                android:alpha=".3"
+
 
                 app:layout_constraintBottom_toBottomOf="@id/tvt_order_num_txt"
                 android:layout_width="wrap_content"
@@ -148,6 +148,7 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="@string/cancel_order"
+
                 android:textColor="@android:color/darker_gray"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -52,9 +52,7 @@ public class OrdersFragment extends Fragment implements OrdersAdapter.onClickIte
     @Override
     public void onClickItemListener(int position, int itemID) {
 
-           getActivity().getSupportFragmentManager().beginTransaction()
-        .add(R.id.nav_host_fragment, OrderDetailsFragment.newInstance())
-        .commit();
+
 
     }
 }

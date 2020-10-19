@@ -11,6 +11,9 @@
         android:label="@string/Account"
         tools:layout="@layout/fragment_home">
 
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_orders"
+            app:destination="@id/navigation_orders" />
     </fragment>
 
     <fragment

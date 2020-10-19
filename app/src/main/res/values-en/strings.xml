@@ -11,16 +11,16 @@
 	<string name="welcome_msg">welcome in</string>
 	<string name="user_name">user name</string>
 	<string name="password">password</string>
-	<string name="login">sign in</string>
+	<string name="login">Login</string>
 	<string name="order_date">tuesday 2020.9.20</string>
 	<string name="order_num_txt">Order number :</string>
 	<string name="order_num">50</string>
-	<string name="order_price">SR 99</string>
+	<string name="order_price"> EG 99</string>
 	<string name="num_items_txt">Number of products:</string>
 	<string name="num_items">3</string>
 	<string name="show_details">View details</string>
 	<string name="cancel_order">Cancel Request</string>
-	<string name="accept_order">Approve Request</string>
+	<string name="accept_order">Confirm Order</string>
 	<string name="order_date_txt">order date</string>
 	<string name="order_status">Order status</string>
 	<string name="new_order">New Order</string>
@@ -47,9 +47,13 @@
 	<string name="about_app">About us</string>
 	<string name="usage_policy">Usage Policy</string>
 	<string name="logout">Logout</string>
-	<string name="time_to_delivery">Delivery time 50 min</string>
+	<string name="time_to_delivery">Delivery time</string>
 	<string name="notifications">Notifications</string>
 	<string name="Account">Profile</string>
 	<string name="current_orders"> Current Requests</string>
 	<string name="order_details">Order details</string>
+	<string name="edit">Edit</string>
+	<string name="time">50</string>
+	<string name="minute">Min</string>
+
 </resources>

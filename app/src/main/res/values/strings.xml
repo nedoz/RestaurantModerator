@@ -15,7 +15,7 @@
     <string name="order_date">tuesday 2020.9.20</string>
     <string name="order_num_txt">رقم الطلب : </string>
     <string name="order_num">50</string>
-    <string name="order_price">99 ريال</string>
+    <string name="order_price">99 جنيه</string>
     <string name="num_items_txt">عدد المنتجات : </string>
     <string name="num_items">3</string>
     <string name="show_details">عرض التفاصيل</string>
@@ -47,9 +47,12 @@
     <string name="about_app">عن التطبيق</string>
     <string name="usage_policy">سياسة الاستخدام</string>
     <string name="logout">تسجيل الخروج</string>
-    <string name="time_to_delivery">وقت التوصيل 50 min</string>
+    <string name="time_to_delivery">وقت التوصيل  </string>
     <string name="Account">الحساب</string>
     <string name="current_orders">الطلبات الحالية</string>
     <string name="notifications">الاشعارات</string>
     <string name="order_details">تفاصيل الطلب</string>
+    <string name="edit">تعديل</string>
+    <string name="time">50 </string>
+    <string name="minute">دقيقة</string>
 </resources>
