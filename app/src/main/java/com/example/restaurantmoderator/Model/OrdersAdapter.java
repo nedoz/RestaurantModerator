@@ -9,11 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.example.restaurantmoderator.R;
 import com.example.restaurantmoderator.databinding.OrderItemBinding;
+import com.example.restaurantmoderator.ui.orders.OrderDetailsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -62,7 +64,13 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.OrdersView
         public OrdersViewHolder(@NonNull OrderItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
+            binding.getRoot().setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
+                    Navigation.findNavController(v).navigate(R.id.action_navigation_orders_to_orderDetailsFragment);
+                }
+            });
 //            tvDate = itemView.findViewById(R.id.tv_order_date);
 //            tvOrderNum = itemView.findViewById(R.id.order_num);
 //            tvOrderPrice = itemView.findViewById(R.id.tv_order_price);
@@ -96,6 +104,8 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.OrdersView
 
     public interface onClickItemListener {
         void onClickItemListener(int position, int itemID);
+
+
 
     }
 }
