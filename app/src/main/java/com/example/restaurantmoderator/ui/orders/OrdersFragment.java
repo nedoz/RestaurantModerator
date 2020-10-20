@@ -4,18 +4,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.restaurantmoderator.Model.Orders;
-import com.example.restaurantmoderator.Model.OrdersAdapter;
-import com.example.restaurantmoderator.R;
+import com.example.restaurantmoderator.Adapters.OrdersAdapter;
 import com.example.restaurantmoderator.databinding.FragmentOrdersBinding;
 
 import java.util.ArrayList;
@@ -39,9 +35,9 @@ public class OrdersFragment extends Fragment implements OrdersAdapter.onClickIte
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ordersArrayList.add(new Orders("tuesday 2020.9.20", 2, "99 ريال", "3"));
-        ordersArrayList.add(new Orders("tuesday 2020.9.20", 2, "99 ريال", "3"));
-        ordersArrayList.add(new Orders("tuesday 2020.9.20", 2, "99 ريال", "3"));
+        ordersArrayList.add(new Orders("tuesday 2020.9.20", 2, "99 جنيه", "3"));
+        ordersArrayList.add(new Orders("tuesday 2020.9.20", 2, "99 جنيه", "3"));
+        ordersArrayList.add(new Orders("tuesday 2020.9.20", 2, "99 جنيه", "3"));
         OrdersAdapter adapter = new OrdersAdapter(ordersArrayList,this,getContext());
         binding.ordersRecyclerView.setAdapter(adapter);
 

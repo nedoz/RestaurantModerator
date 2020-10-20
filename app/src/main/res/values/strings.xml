@@ -55,4 +55,8 @@
     <string name="edit">تعديل</string>
     <string name="time">50 </string>
     <string name="minute">دقيقة</string>
+    <string name="save">حفظ</string>
+    <string name="inProgress">جاري التحضير</string>
+    <string name="Delivering">جاري التوصيل</string>
+    <string name="Delivered">تم التوصيل</string>
 </resources>

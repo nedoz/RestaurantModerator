@@ -133,16 +133,21 @@
                 app:layout_constraintBottom_toBottomOf="@id/bg_view"
                 android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/new_order"
+            <androidx.recyclerview.widget.RecyclerView
+
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:id="@+id/order_status_list"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="125dp"
                 android:layout_marginTop="20dp"
-            android:layout_marginStart="40dp"
+                android:layout_marginStart="40dp"
                 android:fontFamily="@font/cairo"
                 android:text="@string/new_order"
+                android:clickable="true"
+                tools:listitem="@layout/order_status_list_item"
                 android:textColor="@color/green"
                 android:textStyle="bold"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/txt_order_status" />
 
@@ -151,9 +156,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/accept_order"
-                app:layout_constraintTop_toBottomOf="@id/new_order"
-                app:layout_constraintStart_toStartOf="@id/new_order"
-
+                app:layout_constraintTop_toBottomOf="@id/order_status_list"
+                app:layout_constraintStart_toStartOf="@id/order_status_list"
+                android:clickable="true"
                 android:textStyle="bold"
                 android:layout_marginTop="10dp"
                 android:drawableEnd="@drawable/ic_right"

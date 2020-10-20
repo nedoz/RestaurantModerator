@@ -1,23 +1,19 @@
-package com.example.restaurantmoderator.Model;
+package com.example.restaurantmoderator.Adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-import com.example.restaurantmoderator.databinding.OrderItemBinding;
+import com.example.restaurantmoderator.Model.OrderRequest;
 import com.example.restaurantmoderator.databinding.OrderProductsItemBinding;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDetailsAdapter extends RecyclerView.Adapter<OrderDetailsAdapter.OrderDetailsViewHolder> {
@@ -74,7 +70,7 @@ public class OrderDetailsAdapter extends RecyclerView.Adapter<OrderDetailsAdapte
 
     class OrderDetailsViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         OrderProductsItemBinding binding;
-        public OrderDetailsViewHolder(@NonNull @NotNull OrderProductsItemBinding binding) {
+        public OrderDetailsViewHolder(@NonNull OrderProductsItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
 

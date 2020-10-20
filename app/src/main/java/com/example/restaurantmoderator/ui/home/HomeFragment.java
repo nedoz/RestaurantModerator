@@ -1,10 +1,14 @@
 package com.example.restaurantmoderator.ui.home;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.DisplayMetrics;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +17,11 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -23,16 +29,21 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
 
+import com.example.restaurantmoderator.LocaleHelper;
 import com.example.restaurantmoderator.NavigationActivity;
 import com.example.restaurantmoderator.R;
 import com.example.restaurantmoderator.databinding.ActivityNavigationBinding;
 import com.example.restaurantmoderator.databinding.FragmentHomeBinding;
+
+import java.util.Locale;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
     FragmentHomeBinding binding;
     Toolbar toolbar;
+    boolean lang_selected;
+
     NavigationActivity activity = new NavigationActivity();
 
 
@@ -74,33 +85,8 @@ public class HomeFragment extends Fragment {
                 binding.etTime.requestFocus();
                 binding.etTime.setFocusableInTouchMode(true);
                 binding.etTime.setVisibility(View.VISIBLE);
+                binding.btnSave.setVisibility(View.VISIBLE);
                 binding.etTime.setText(time);
-
-//            binding.etTime.addTextChangedListener(new TextWatcher() {
-//                @Override
-//                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//
-//                }
-//
-//                @Override
-//                public void onTextChanged(CharSequence s, int start, int before, int count) {
-//
-//                }
-//
-//                @Override
-//                public void afterTextChanged(Editable s) {
-//
-//                    String time = binding.etTime.getText().toString();
-//                    binding.tvTime.setText(time);
-//
-//
-//
-//                }
-//
-//
-//
-//            });
-
 
             }
         });
@@ -115,10 +101,6 @@ public class HomeFragment extends Fragment {
                                 event.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
                     if (event == null || !event.isShiftPressed()) {
                         // the user is done typing.
-
-                        binding.etTime.setVisibility(View.GONE);
-                        binding.tvTime.setText(binding.etTime.getText().toString());
-                        binding.btnEdit.setVisibility(View.VISIBLE);
                         binding.btnEdit.setFocusable(false);
                         View view = getActivity().getCurrentFocus();
                         if (view != null) {
@@ -133,5 +115,72 @@ public class HomeFragment extends Fragment {
 
         });
 
+
+        binding.btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                binding.etTime.setVisibility(View.GONE);
+                binding.btnEdit.setVisibility(View.VISIBLE);
+                binding.tvTime.setText(binding.etTime.getText().toString());
+                binding.btnSave.setVisibility(View.GONE);
+               // binding.etTime.setVisibility(View.GONE);
+            }
+        });
+
+        binding.tvLang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final String[] Language = {"ENGLISH", "العربية"};
+                final int checkedItem;
+                if(lang_selected)
+                {
+                    checkedItem=0;
+                }else
+                {
+                    checkedItem=1;
+                }
+                final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Select a Language...")
+                        .setSingleChoiceItems(Language, checkedItem, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                binding.tvLang.setText(Language[which]);
+                                lang_selected= Language[which].equals("ENGLISH");
+                                //if user select prefered language as English then
+                                if(Language[which].equals("ENGLISH"))
+                                {
+                                    Context context = LocaleHelper.setLocale(getActivity(), "en");
+                                }
+                                //if user select prefered language as Hindi then
+                                if(Language[which].equals("العربية"))
+                                {
+                                    Context context = LocaleHelper.setLocale(getActivity(), "ar");
+
+                                 //   setAppLocale("ar");
+
+                                }
+                            }
+                        })
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        });
+                builder.create().show();
+
+            }
+        });
+
+
+    }
+
+    public void setAppLocale(String localeCode)
+    {
+        Resources resources= getResources();
+        DisplayMetrics metrics = resources.getDisplayMetrics();
+        Configuration configuration = resources.getConfiguration();
+        configuration.setLocale(new Locale(localeCode.toLowerCase()));
+        resources.updateConfiguration(configuration, metrics);
     }
 }

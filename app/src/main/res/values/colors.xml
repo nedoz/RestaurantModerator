@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#fd9426</color>
     <color name="colorAccent">#fd9426</color>
     <color name="green">#90ee02</color>
+    <color name="red">@android:color/holo_red_dark</color>
 </resources>

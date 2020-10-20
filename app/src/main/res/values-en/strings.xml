@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">Restaurant Moderator</string>
+	<string name="app_name">Ordavo Restaurant</string>
 	<string name="title_activity_navigation">MainActivity</string>
 	<string name="title_home">Account</string>
 	<string name="title_dashboard">Current applications</string>
@@ -55,5 +55,9 @@
 	<string name="edit">Edit</string>
 	<string name="time">50</string>
 	<string name="minute">Min</string>
+    <string name="save">Save</string>
+	<string name="inProgress">in Progress</string>
+	<string name="Delivering">Delivering</string>
+	<string name="Delivered">Delivered</string>
 
 </resources>
