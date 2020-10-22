@@ -14,13 +14,21 @@
         <action
             android:id="@+id/action_navigation_home_to_navigation_orders"
             app:destination="@id/navigation_orders" />
+        <action
+            android:id="@+id/action_navigation_home_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_usagePolicyFragment"
+            app:destination="@id/usagePolicyFragment" />
     </fragment>
 
     <fragment
+
         android:id="@+id/navigation_orders"
+
         android:name="com.example.restaurantmoderator.ui.orders.OrdersFragment"
-android:label="@string/current_orders"
-        tools:layout="@layout/fragment_orders" >
+        android:label="@string/current_orders"
+        tools:layout="@layout/fragment_orders">
         <action
             android:id="@+id/action_navigation_orders_to_orderDetailsFragment"
             app:destination="@id/orderDetailsFragment" />
@@ -29,16 +37,31 @@ android:label="@string/current_orders"
     <fragment
         android:id="@+id/navigation_notifications"
         android:name="com.example.restaurantmoderator.ui.notifications.NotificationsFragment"
-android:label="@string/notifications"
+        android:label="@string/notifications"
         tools:layout="@layout/fragment_notifications" />
 
 
     <fragment
+
         android:id="@+id/orderDetailsFragment"
         android:name="com.example.restaurantmoderator.ui.orders.OrderDetailsFragment"
         android:label="@string/order_details"
 
-        tools:layout="@layout/fragment_order_details" />
+        tools:layout="@layout/fragment_order_details">
+        <action
+            android:id="@+id/action_orderDetailsFragment_to_navigation_orders"
+            app:destination="@id/navigation_orders" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/usagePolicyFragment"
+        android:name="com.example.restaurantmoderator.ui.UsagePolicyFragment"
+        android:label="UsagePolicyFragment" />
+
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.example.restaurantmoderator.ui.aboutAppFragment"
+        android:label="aboutAppFragment" />
 
 
 </navigation>

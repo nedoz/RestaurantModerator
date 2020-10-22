@@ -90,7 +90,8 @@
             android:padding="10dp"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
-            android:textAlignment="textStart"
+            android:textAlignment="viewStart"
+
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintEnd_toEndOf="@+id/et_username"
             app:layout_constraintHorizontal_bias="0.0"

@@ -43,6 +43,7 @@ public class HomeFragment extends Fragment {
     FragmentHomeBinding binding;
     Toolbar toolbar;
     boolean lang_selected;
+    static int checkedItem;
 
     NavigationActivity activity = new NavigationActivity();
 
@@ -77,6 +78,21 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        binding.tvAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_navigation_home_to_aboutAppFragment);
+
+            }
+        });
+
+        binding.tvUsagePolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_navigation_home_to_usagePolicyFragment);
+
+            }
+        });
         binding.btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,34 +147,31 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 final String[] Language = {"ENGLISH", "العربية"};
-                final int checkedItem;
-                if(lang_selected)
-                {
-                    checkedItem=0;
-                }else
-                {
-                    checkedItem=1;
-                }
                 final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                builder.setTitle("Select a Language...")
-                        .setSingleChoiceItems(Language, checkedItem, new DialogInterface.OnClickListener() {
+                builder.setTitle(getResources().getString(R.string.selectLang))
+                        .setSingleChoiceItems(Language,checkedItem, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 binding.tvLang.setText(Language[which]);
-                                lang_selected= Language[which].equals("ENGLISH");
+                            //    lang_selected= Language[which].equals("ENGLISH");
                                 //if user select prefered language as English then
                                 if(Language[which].equals("ENGLISH"))
                                 {
+                                    checkedItem =0;
                                     Context context = LocaleHelper.setLocale(getActivity(), "en");
                                 }
                                 //if user select prefered language as Hindi then
                                 if(Language[which].equals("العربية"))
                                 {
+                                    checkedItem =1;
                                     Context context = LocaleHelper.setLocale(getActivity(), "ar");
 
                                  //   setAppLocale("ar");
 
                                 }
+                                getActivity().recreate();
+                                binding.tvLang.setText(Language[which]);
+
                             }
                         })
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {

@@ -1,6 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">RestaurantModerator</string>
+    <string name="title_activity_navigation">MainActivity</string>
+    <string name="title_home">الحساب</string>
+    <string name="title_dashboard">الطلبات الحالية</string>
+    <string name="title_notifications">إشعارات</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_to_cont">من فضلك سجل الدخول للمتابعة</string>
+    <string name="restaurant_name">اسم المطعم</string>
+    <string name="welcome_msg">مرحبا بك في</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="password">كلمة المرور</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="order_date">tuesday 2020.9.20</string>
+    <string name="order_num_txt">رقم الطلب : </string>
+    <string name="order_num">50</string>
+    <string name="order_price">99 جنيه</string>
+    <string name="num_items_txt">عدد المنتجات : </string>
+    <string name="num_items">3</string>
+    <string name="show_details">عرض التفاصيل</string>
+    <string name="cancel_order">الغاء الطلب</string>
+    <string name="accept_order">قبول الطلب</string>
+    <string name="order_date_txt">تاريخ الطلب</string>
+    <string name="order_status">حالة الطلب</string>
+    <string name="new_order">طلب جديد</string>
+    <string name="order_items">المنتجات المطلوبة</string>
+    <string name="product_name">اسم المنتج</string>
+    <string name="product_description">product description</string>
+    <string name="quantity">الكمية : </string>
+    <string name="price_txt">السعر : </string>
+    <string name="notes">ملاحظات : </string>
+    <string name="options">خيارات : </string>
+    <string name="not_found">لا يوجد</string>
+    <string name="additions"> الاضافات : </string>
+    <string name="payment">الدفع</string>
+    <string name="payment_method">طريقة الدفع</string>
+    <string name="paiement_when_recieving">الدفع عند الاستلام</string>
+    <string name="total">الاجمالي</string>
+    <string name="please_update_now">Please Update Now !!!</string>
+    <string name="status">الحالة  (غير متاح)</string>
+    <string name="last_orders">اخر الطلبات</string>
+    <string name="rates">التقييمات</string>
+    <string name="app_lang">لغة التطبيق</string>
+    <string name="Lang">عربي</string>
+    <string name="contact_us">اتصل بنا</string>
+    <string name="about_app">عن التطبيق</string>
+    <string name="usage_policy">سياسة الاستخدام</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="time_to_delivery">وقت التوصيل  </string>
     <string name="Account">الحساب</string>
     <string name="current_orders">الطلبات الحالية</string>
+    <string name="notifications">الاشعارات</string>
     <string name="order_details">تفاصيل الطلب</string>
+    <string name="edit">تعديل</string>
+    <string name="time">50 </string>
+    <string name="minute">دقيقة</string>
+    <string name="save">حفظ</string>
+    <string name="inProgress">جاري التحضير</string>
+    <string name="Delivering">جاري التوصيل</string>
+    <string name="Delivered">تم التوصيل</string>
+    <string name="selectLang">اختر اللغة</string>
+
 </resources>

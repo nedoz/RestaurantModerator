@@ -6,6 +6,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.preference.PreferenceManager;
+import android.util.DisplayMetrics;
 
 import java.util.Locale;
 public class LocaleHelper {
@@ -16,7 +17,7 @@ public class LocaleHelper {
         private static final String SELECTED_LANGUAGE = "Locale.Helper.Selected.Language";
 
         public static Context onAttach(Context context) {
-            String lang = getPersistedData(context, Locale.getDefault().getLanguage());
+            String lang = getPersistedData(context, getLanguage(context));
             return setLocale(context, lang);
         }
 
@@ -53,13 +54,18 @@ public class LocaleHelper {
         }
 
         @TargetApi(Build.VERSION_CODES.N)
-        private static Context updateResources(Context context, String language) {
+        public static Context updateResources(Context context, String language) {
             Locale locale = new Locale(language);
             Locale.setDefault(locale);
 
             Configuration configuration = context.getResources().getConfiguration();
             configuration.setLocale(locale);
+            Resources res =context. getResources();
+            DisplayMetrics dm = res.getDisplayMetrics();
+            Configuration conf = res.getConfiguration();
+            conf.locale = locale;
             configuration.setLayoutDirection(locale);
+            res.updateConfiguration(conf, dm);
 
             return context.createConfigurationContext(configuration);
         }
@@ -73,6 +79,13 @@ public class LocaleHelper {
 
             Configuration configuration = resources.getConfiguration();
             configuration.locale = locale;
+
+            Resources res =context. getResources();
+            DisplayMetrics dm = res.getDisplayMetrics();
+            Configuration conf = res.getConfiguration();
+            conf.locale = locale;
+            res.updateConfiguration(conf, dm);
+
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
                 configuration.setLayoutDirection(locale);
             }

@@ -3,9 +3,11 @@ package com.example.restaurantmoderator.ui.orders;
 import android.graphics.Color;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +47,12 @@ public class OrderDetailsFragment extends Fragment implements OrderStatusListAda
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // This callback will only be called when MyFragment is at least Started.
+
+
+        // The callback can be enabled or disabled here or in handleOnBackPressed()
+
+
 
     }
 
@@ -62,6 +70,7 @@ public class OrderDetailsFragment extends Fragment implements OrderStatusListAda
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
 
         orderRequestArrayList.add(new OrderRequest(R.drawable.food, "اسم المنتج", "Description   Description",
                 "2", "22 جنيه",
@@ -85,6 +94,8 @@ public class OrderDetailsFragment extends Fragment implements OrderStatusListAda
 
         statusListAdapter    = new OrderStatusListAdapter(orderStatusModelArrayList,this,getActivity());
       binding.orderStatusList.setAdapter(statusListAdapter);
+
+
 
 
 

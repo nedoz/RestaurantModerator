@@ -53,11 +53,22 @@ public class OrderStatusListAdapter extends RecyclerView.Adapter<OrderStatusList
     public void onBindViewHolder(@NonNull OrderStatusListViewHolder holder, final int position) {
         OrderStatusModel currentItem = ArrayList.get(position);
              holder.binding.orderStatusTxt.setText(currentItem.getOrderStatus());
-             holder.binding.orderStatusTxt.setTextColor(selected_position == position ?
-                     (context.getResources().getColor(R.color.red))
-                     : (context.getResources().getColor(R.color.green)));
-             holder.binding.checkedImg.setVisibility(selected_position == position ? View.VISIBLE : View.GONE);
+//             holder.binding.orderStatusTxt.setTextColor(selected_position == position ?
+//                     (context.getResources().getColor(R.color.red))
+//                     : (context.getResources().getColor(R.color.green)));
 
+            holder.binding.orderStatusTxt.setAlpha(selected_position >= position  ? 1 : .4f);
+            holder.binding.checkedImg.setAlpha(selected_position >= position  ? 1 : .4f);
+            holder.binding.ivDone.setAlpha(selected_position >= position  ? 1 : .4f);
+            holder.binding.line1.setAlpha(selected_position >= position  ? 1 : .4f);
+            if (position == 2)
+            {holder.binding.line1.setVisibility(View.GONE);}
+
+            if(selected_position == 2)
+            {
+                holder.binding.line1.setVisibility(View.GONE);
+               
+            }
 
             holder.binding.orderStatusTxt.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -84,15 +95,12 @@ public class OrderStatusListAdapter extends RecyclerView.Adapter<OrderStatusList
         public OrderStatusListViewHolder(@NonNull OrderStatusListItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
-         //   binding.orderStatusTxt.setOnClickListener(this);
 
         }
 
 
         @Override
         public void onClick(View v) {
-
-//            itemListener.onClickItemListener(getAdapterPosition(),MessagesArrayList.get(getAdapterPosition()).getId());
 
         }
     }

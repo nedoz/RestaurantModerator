@@ -26,6 +26,7 @@ public TextView toolbarTile;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
       //  setContentView(R.layout.activity_navigation);
+        LocaleHelper.onAttach(this);
         ActivityNavigationBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_navigation);
 
         setSupportActionBar(binding.toolBar.toolBar1);
@@ -36,8 +37,9 @@ public TextView toolbarTile;
                 R.id.navigation_home, R.id.navigation_orders, R.id.navigation_notifications)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
+        NavigationUI.setupWithNavController(binding.toolBar.toolBar1,navController,appBarConfiguration);
         toolbar = findViewById(R.id.toolBar);
         toolbarTile = toolbar.findViewById(R.id.toolbar_title);
 navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
