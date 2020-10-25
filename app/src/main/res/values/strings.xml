@@ -60,5 +60,7 @@
     <string name="Delivering">out of Delivery</string>
     <string name="Delivered">Delivered</string>
     <string name="selectLang">Selecet Language</string>
+    <string name="done">Done</string>
+    <string name="default_notification_channel_id">Channel ID</string>
 
 </resources>

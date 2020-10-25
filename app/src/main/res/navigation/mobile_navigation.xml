@@ -56,12 +56,12 @@
     <fragment
         android:id="@+id/usagePolicyFragment"
         android:name="com.example.restaurantmoderator.ui.UsagePolicyFragment"
-        android:label="UsagePolicyFragment" />
+        android:label="@string/usage_policy" />
 
     <fragment
         android:id="@+id/aboutAppFragment"
         android:name="com.example.restaurantmoderator.ui.aboutAppFragment"
-        android:label="aboutAppFragment" />
+        android:label="@string/about_app" />
 
 
 </navigation>

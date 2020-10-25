@@ -17,6 +17,7 @@ import com.example.restaurantmoderator.Model.OrderStatusModel;
 import com.example.restaurantmoderator.R;
 import com.example.restaurantmoderator.databinding.OrderItemBinding;
 import com.example.restaurantmoderator.databinding.OrderStatusListItemBinding;
+import com.example.restaurantmoderator.ui.orders.OrderDetailsFragment;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -57,10 +58,12 @@ public class OrderStatusListAdapter extends RecyclerView.Adapter<OrderStatusList
 //                     (context.getResources().getColor(R.color.red))
 //                     : (context.getResources().getColor(R.color.green)));
 
+
             holder.binding.orderStatusTxt.setAlpha(selected_position >= position  ? 1 : .4f);
             holder.binding.checkedImg.setAlpha(selected_position >= position  ? 1 : .4f);
             holder.binding.ivDone.setAlpha(selected_position >= position  ? 1 : .4f);
             holder.binding.line1.setAlpha(selected_position >= position  ? 1 : .4f);
+         //   holder.binding.btnDone.setAlpha(selected_position >= position  ? 1 : .4f);
             if (position == 2)
             {holder.binding.line1.setVisibility(View.GONE);}
 
@@ -82,6 +85,37 @@ public class OrderStatusListAdapter extends RecyclerView.Adapter<OrderStatusList
                     selected_position = position;
                     notifyDataSetChanged();
                 }
+
+            });
+
+            holder.binding.btnDone.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (selected_position == position) {
+
+                        if(position == 0)
+                        {
+                            OrderDetailsFragment.orderStatusModelArrayList.add(new OrderStatusModel(context.getResources().getString(R.string.Delivering)));
+                            notifyDataSetChanged();
+                           // binding.btnDone.setClickable(false);
+                        }
+                        if(position == 1)
+                        {
+                            OrderDetailsFragment.orderStatusModelArrayList.add(new OrderStatusModel(context.getResources().getString(R.string.Delivered)));
+                            notifyDataSetChanged();
+                          //  binding.btnDone.setClickable(false);
+
+                        }
+                        //selected_position = -1;
+                        notifyDataSetChanged();
+                        return;
+                    }
+                    selected_position = position;
+                    notifyDataSetChanged();
+                   // binding.btnDone.setEnabled(false);
+
+                }
+
 
             });
     }

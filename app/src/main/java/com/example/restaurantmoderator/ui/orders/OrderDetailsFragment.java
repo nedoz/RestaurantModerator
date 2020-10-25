@@ -30,7 +30,7 @@ public class OrderDetailsFragment extends Fragment implements OrderStatusListAda
     FragmentOrderDetailsBinding binding;
     ArrayList<OrderRequest> orderRequestArrayList = new ArrayList<>();
     OrderStatusListAdapter statusListAdapter;
-    ArrayList<OrderStatusModel> orderStatusModelArrayList = new ArrayList<>();
+    public static ArrayList<OrderStatusModel> orderStatusModelArrayList = new ArrayList<>();
     OrderStatusListItemBinding binding2;
 
     public OrderDetailsFragment() {
@@ -89,8 +89,8 @@ public class OrderDetailsFragment extends Fragment implements OrderStatusListAda
         binding.orderItemsRecycler.setAdapter(adapter);
 
        orderStatusModelArrayList.add(new OrderStatusModel(getResources().getString(R.string.inProgress)));
-        orderStatusModelArrayList.add(new OrderStatusModel(getResources().getString(R.string.Delivering)));
-        orderStatusModelArrayList.add(new OrderStatusModel(getResources().getString(R.string.Delivered)));
+//        orderStatusModelArrayList.add(new OrderStatusModel(getResources().getString(R.string.Delivering)));
+//        orderStatusModelArrayList.add(new OrderStatusModel(getResources().getString(R.string.Delivered)));
 
         statusListAdapter    = new OrderStatusListAdapter(orderStatusModelArrayList,this,getActivity());
       binding.orderStatusList.setAdapter(statusListAdapter);

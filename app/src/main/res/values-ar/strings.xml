@@ -60,5 +60,7 @@
     <string name="Delivering">جاري التوصيل</string>
     <string name="Delivered">تم التوصيل</string>
     <string name="selectLang">اختر اللغة</string>
+    <string name="done">تم</string>
+    <string name="default_notification_channel_id">Channel ID</string>
 
 </resources>

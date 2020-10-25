@@ -51,6 +51,12 @@ navController.addOnDestinationChangedListener(new NavController.OnDestinationCha
          toolbarTile.setText(destination.getLabel());
      else if(destination.getId()==R.id.navigation_notifications)
          toolbarTile.setText(destination.getLabel());
+     else if(destination.getId()== R.id.usagePolicyFragment)
+         toolbarTile.setText(destination.getLabel());
+     else if(destination.getId() == R.id.aboutAppFragment)
+         toolbarTile.setText(destination.getLabel());
+
+
     }
 
 });

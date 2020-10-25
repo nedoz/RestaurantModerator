@@ -54,6 +54,19 @@
             app:layout_constraintTop_toTopOf="@id/order_status_txt"
             android:layout_height="wrap_content"/>
 
+        <Button
+            android:id="@+id/btn_done"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="4dp"
+             android:background="@drawable/btn_bg"
+            android:text="@string/done"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.775"
+            app:layout_constraintStart_toEndOf="@id/line1"
+            app:layout_constraintTop_toBottomOf="@id/line1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
