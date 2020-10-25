@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "144518452166",
+    "firebase_url": "https://ordavorestaurant.firebaseio.com",
+    "project_id": "ordavorestaurant",
+    "storage_bucket": "ordavorestaurant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144518452166:android:cb1649895cf52b95e918c7",
+        "android_client_info": {
+          "package_name": "com.example.restaurantmoderator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144518452166-3jni9mfagumsnmjs7dc44csac6nl1lag.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.restaurantmoderator",
+            "certificate_hash": "01b904988f958096187c315d1b6f622db2017384"
+          }
+        },
+        {
+          "client_id": "144518452166-h6pi7vto9faqkdntivpbheqqd7ksvuef.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-npqtX89HlHtAN0vqPutbGVHvmTnnyac"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144518452166-h6pi7vto9faqkdntivpbheqqd7ksvuef.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
